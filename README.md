@@ -17,3 +17,12 @@ ______________________________________
 How to run some *.py file from current environment? 
 
 pipenv run python /path/to/*.py
+
+
+______________________________________
+How to click in Skoda web app?
+
+The list of potential libs:
+1. pipenv install PyChromeDevTools            ->   ( https://github.com/marty90/PyChromeDevTools )
+2. pipenv install chrome-devtools-protocol    ->   ( https://github.com/HyperionGray/python-chrome-devtools-protocol )
+

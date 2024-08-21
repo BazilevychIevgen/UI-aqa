@@ -8,6 +8,7 @@ pytest = "*"
 requests = "*"
 bs4 = "*"
 pyquery = "*"
+pychromedevtools = "*"
 
 [dev-packages]
 
