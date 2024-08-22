@@ -10,7 +10,7 @@ __email__ = "fedoretss@gmail.com"
 __status__ = "Production"
 
 
-trace_pattern = logging.Formatter("[%(asctime)s] %(levelname)s %(module)s:%(lineno)d:%(funcName)s: %(message)s")
+trace_pattern = logging.Formatter("[%(asctime)s] %(levelname)s %(module)s:%(lineno)d:%(funcName)s ::>>>  %(message)s")
 
 stream_handler = logging.StreamHandler()
 stream_handler.setLevel(logging.DEBUG)

@@ -4,6 +4,8 @@ Python version - 3.12.5
 
 For virtual environment used pipenv
 
+Trello link -> https://trello.com/invite/63c5092812c85e023c19d512/ATTIa09eb5e1ea49a606bbbf4812c0c0f853B0B1DB86
+
 """"""""""""""""""""""""""""""""""""""
 
 ______________________________________
