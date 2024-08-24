@@ -9,6 +9,8 @@ requests = "*"
 bs4 = "*"
 pyquery = "*"
 pychromedevtools = "*"
+sshtunnel = "*"
+websockets = "*"
 
 [dev-packages]
 

@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from GeneralArsenal.Chronicler import info, debug, error, warning
 import requests
-import json
+from websockets.sync.client import connect
 
 
 __author__ = 'PyARK'
@@ -12,16 +12,24 @@ __status__ = "Production"
 __description__ = ""
 
 
-debug('Debug message')
-info('Info message')
-error('Error message')
-warning('Warning message')
+"""
+log.debug('Debug message')
+log.info('Info message')
+log.error('Error message')
+log.warning('Warning message')
+"""
 
 
-resp = requests.get('http://localhost:9333/json')
-debug(resp.content)
-debug(type(resp.content))
-debug(resp.content.decode())
-debug(type(resp.content.decode()))
+def getWebSocketDebuggerUrl(carapp_name='carapp_updatecenterlite', port=9333):
+    appDebugInfo = requests.get('http://localhost:' + str(port) + '/json').json()
+    # log.debug(appDebugInfo)
 
-# debug(json.load(resp.json))
+    devToolsCred = next((devToolsDict for devToolsDict in appDebugInfo if devToolsDict['title']==carapp_name), None)
+    if devToolsCred:
+        return devToolsCred['webSocketDebuggerUrl']
+    log.debug('Not found')
+
+
+if __name__ == '__main__':
+    webSocketURL = getWebSocketDebuggerUrl('carapp_updatecenterlite')
+    webSocketObject = connect(webSocketURL)
