@@ -13,21 +13,21 @@ __description__ = ""
 
 
 """
-log.debug('Debug message')
-log.info('Info message')
-log.error('Error message')
-log.warning('Warning message')
+debug('Debug message')
+info('Info message')
+error('Error message')
+warning('Warning message')
 """
 
 
 def getWebSocketDebuggerUrl(carapp_name='carapp_updatecenterlite', port=9333):
     appDebugInfo = requests.get('http://localhost:' + str(port) + '/json').json()
-    # log.debug(appDebugInfo)
+    # debug(appDebugInfo)
 
     devToolsCred = next((devToolsDict for devToolsDict in appDebugInfo if devToolsDict['title']==carapp_name), None)
     if devToolsCred:
         return devToolsCred['webSocketDebuggerUrl']
-    log.debug('Not found')
+    debug('Not found')
 
 
 if __name__ == '__main__':
