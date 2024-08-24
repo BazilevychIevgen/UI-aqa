@@ -26,5 +26,11 @@ log.addHandler(stream_handler)
 # file_handler.setFormatter(trace_pattern)
 # log.addHandler(file_handler)
 
+info = lambda message: log.info(message)
+debug = lambda message: log.debug(message)
+error = lambda message: log.error(message)
+warning = lambda message: log.warning(message)
 
-log.info('Python version: {}'.format(sys.version.split('\n')))
+info('Python version: {}'.format(sys.version.split('\n')))
+
+
