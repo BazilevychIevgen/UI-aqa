@@ -1,6 +1,6 @@
 # -- coding: utf-8 --
 from __future__ import unicode_literals
-from GeneralArsenal.Chronicler import log
+from GeneralArsenal.Chronicler import info, debug, error, warning
 import requests
 from websockets.sync.client import connect
 
